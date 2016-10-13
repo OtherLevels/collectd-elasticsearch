@@ -1025,7 +1025,7 @@ def dispatch_stat(result, name, key, dimensions=None):
     # If dimensions are provided, format them and append
     # them to the plugin_instance
     if dimensions:
-        val.plugin_instance += '-{dims}'.format(dims=','.join(['='.join(d)
+        val.plugin_instance += '-{dims}'.format(dims=','.join(['-'.join(d)
                                                  for d in dimensions.items()]))
 
     val.type = estype
